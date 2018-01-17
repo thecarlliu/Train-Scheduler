@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Train Scheduler</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+</head>
+
+<body>
+	<div class= "jumbotron">
+
+		<div id="titleArea"><h1>Anytime is Train Time!</h1><br><p>Choo Choo. Chee Chee.</div>
+		<br>
+		<div id="tableArea">
+			<table class="table form-primary">
+			  <thead>Current Train Schedule
+			    <tr>
+			      <th scope="col">Train Name</th>
+			      <th scope="col">Destination</th>
+			      <th scope="col">Frequency (min)</th>
+			      <th scope="col">Next Arrival</th>
+			      <th scope="col">Minutes Away</th>
+			    </tr>
+			  </thead>
+			  <tbody id="tableBody">
+
+			  </tbody>
+			</table>
+		</div>
+		<br>
+		<div id="formArea"> Add Train
+			<div class="form-group">
+			    <label for="nameInput">Train Name</label>
+			    <input type = "text" class="form-control" id="nameInput">
+			</div>
+			<div class="form-group">
+			    <label for="destinationInput">Destination</label>
+			    <input type = "text" class="form-control" id="destinationInput">
+			</div>
+			<div class="form-group">
+			    <label for="trainTimeInput">First Train Time (HH:mm - military time)</label>
+			    <input type = "text" class="form-control" id="trainTimeInput">
+			</div>
+			<div class="form-group">
+			    <label for="frequencyInput">Frequency (min)</label>
+			    <input type = "text" class="form-control" id="frequencyInput">
+			</div>
+			<button type="submit" id= "submitBtn" class="btn btn-primary">Submit</button>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../Train-Scheduler/app.js"></script>
+
+</body>
+
+</html>
